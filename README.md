@@ -223,3 +223,26 @@ Ahora, simplemente mueve o copia este archivo `tareas.desktop` a tu escritorio o
 Al hacer doble clic en este archivo `.desktop`, se ejecutará tu aplicación de gestión de tareas directamente.
 
 Recuerda cambiar la ruta del ejecutable y la ruta al script `gestor_tareas.py` según sea necesario para que se corresponda con la ubicación real de tu archivo.
+
+* Ejemplo de donde estan los `.desktop ` en ubuntu
+```
+cd /usr/share/applications
+```
+* crea el desktop
+```
+nano tareas.desktop
+```
+```plaintext
+[Desktop Entry]
+Name=Gestor de Tareas
+Exec=/usr/bin/python3 /ruta/a/tu/directorio/gestor_tareas.py
+Icon=gnome-panel-launcher
+Type=Application
+Categories=Utility;
+```
+### Guarda el archivo
+* Ahora dale permisos
+```bash
+chmod +x tareas.desktop
+```
+
